@@ -15,31 +15,7 @@ jobs:
     steps:
         - name: step one
           uses: actions/checkout@v2
-        - name: step two
-          run: date
-  job2:
-    name: second job
-    runs-on: windows-latest
-    steps:
-        - name: step one
-          uses: actions/checkout@v2
-        - name: step two
-          run: "Get-Date"
-  job3:
-    name: third job
-    runs-on: macOS-latest
-    steps:
-        - name: step one
-          uses: actions/checkout@v2
-        - name: step two
-          run: date
-  job4:
-    needs: [ job1, job2, job3 ]
-    name: fouth job
-    runs-on: windows-latest
-    steps:
-        - name: step one
-          uses: actions/checkout@v2
-        - name: step two
-          run: "Get-Date"
-
+        - name: Python Syntax Checker
+          # You may pin to the exact commit or the version.
+          # uses: cclauss/Find-Python-syntax-errors-action@90f67be9fb626b675a3971b1d08ab29851cb721f
+          uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
