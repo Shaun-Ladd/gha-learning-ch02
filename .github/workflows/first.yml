@@ -15,12 +15,6 @@ jobs:
     steps:
         - name: checkout
           uses: actions/checkout@v2
-<<<<<<< HEAD
-        - name: Python Syntax Checker
-          # You may pin to the exact commit or the version.
-          # uses: cclauss/Find-Python-syntax-errors-action@90f67be9fb626b675a3971b1d08ab29851cb721f
-          uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
-=======
         - name: tar
           run: tar cvf all.tar *
         - name: Upload artifact for linux
@@ -28,4 +22,3 @@ jobs:
             with:
               name: all.tar
               path: ./${{ env.FILE_NAME }}
->>>>>>> c4362a0 (tar and upload)
