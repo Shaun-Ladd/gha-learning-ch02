@@ -19,6 +19,6 @@ jobs:
           run: tar cvf all.tar *
         - name: Upload artifact for linux
           uses: actions/upload-artifact@v1.0.0
-            with:
-              name: all.tar
-              path: ./${{ env.FILE_NAME }}
+          with:
+            name: all.tar
+            path: ./${{ env.FILE_NAME }}
