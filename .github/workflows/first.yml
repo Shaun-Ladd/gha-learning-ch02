@@ -26,16 +26,16 @@ jobs:
         - name: step two
           run: "Get-Date"
   job3:
-    name: second job
+    name: third job
     runs-on: macOS-latest
     steps:
         - name: step one
           uses: actions/checkout@v2
         - name: step two
-          run: "Get-Date"
+          run: date
   job4:
     needs: [ job1, job2, job3 ]
-    name: second job
+    name: fouth job
     runs-on: windows-latest
     steps:
         - name: step one
